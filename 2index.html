@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .head {
+            width: 100%;
+            height: 85px;
+            background-color: #fff;
+        }
+        
+        .head .top {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .top .logo {
+            float: left;
+            margin-top: 14px;
+        }
+        
+        .logo img {
+            width: 135px;
+            height: 100%;
+        }
+        
+        .top ul {
+            float: right;
+            height: 85px;
+            line-height: 85px;
+        }
+        
+        .top ul li {
+            float: left;
+        }
+        
+        .top ul li a {
+            color: #333;
+            margin: 0px 25px;
+        }
+        
+        .top ul li a.active {
+            color: rgb(185, 54, 3);
+            border-bottom: 2px solid rgb(185, 54, 3);
+            padding-bottom: 5px;
+        }
+        
+        .top ul li a:hover {
+            color: rgb(185, 54, 3);
+        }
+        
+        .banner {
+            width: 100%;
+            height: 470px;
+            background: url(./img/大图.jpg)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .section {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section .hot {
+            margin: 60px 0px;
+        }
+        
+        .section .hot .hot_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .xian {
+            width: 100px;
+            background-color: #333;
+            height: 2px;
+            display: inline-block;
+        }
+        
+        .ms {
+            margin: 0px 30px;
+            font-size: 34px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .hot_b {
+            overflow: hidden;
+        }
+        
+        .hot_b ul li {
+            float: left;
+            width: 435px;
+            overflow: hidden;
+            margin-right: 45px;
+            margin-top: 40px;
+        }
+        
+        .hot_b ul li img {
+            width: 100%;
+        }
+        
+        .hot_b ul li div {
+            margin-top: 10px;
+        }
+        
+        .hot_b ul li div h3 {
+            margin-bottom: 8px;
+        }
+        
+        .hot_b ul li div p {
+            font-size: 14px;
+            color: rgb(143, 140, 140);
+        }
+        
+        .about .ab_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .about .ab_b {
+            margin-top: 10px;
+            overflow: hidden;
+            word-break: normal;
+        }
+        
+        .ab_r p {
+            text-indent: 2rem;
+            margin: 10px 0px;
+            line-height: 28px;
+            font-size: 15px;
+        }
+        
+        .ys_b {
+            overflow: hidden;
+        }
+        
+        .ys_b ul li {
+            float: left;
+            width: 435px;
+            overflow: hidden;
+            margin-right: 45px;
+            margin-top: 40px;
+        }
+        
+        .ys_b ul li img {
+            width: 100%;
+        }
+        
+        .ys_b ul li div {
+            margin-top: 10px;
+        }
+        
+        .ys_b ul li div h3 {
+            margin-bottom: 8px;
+        }
+        
+        .ys_b ul li div p {
+            font-size: 14px;
+            color: rgb(143, 140, 140);
+        }
+        
+        .ys_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .section .ys {
+            margin: 60px 0px;
+        }
+        
+        .footer {
+            background-color: rgb(31, 32, 36);
+            overflow: hidden;
+        }
+        
+        .footer .bottom {
+            width: 1200px;
+            margin: 40px auto 20px auto;
+            overflow: hidden;
+        }
+        
+        .footer .bottom .left {
+            float: left;
+            width: 148px;
+            height: 80px;
+           background: url(./img/mylogo.png)no-repeat;       
+            background-size: 100% 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            }      
+            
+        
+        .footer .center {
+            float: left;
+            margin-left: 268px;
+            color: #fff;
+        }
+        
+        .footer .center dl {
+            display: inline-block;
+            margin: 0px 30px;
+        }
+        
+        .footer .center dl dt {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .footer .center dd {
+            margin: 5px 0px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .footer .right {
+            float: right;
+        }
+        
+        .footer .right h3 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        
+        .bq {
+            height: 40px;
+            line-height: 40px;
+            background-color: rgb(34, 38, 42);
+        }
+        
+        .bq p {
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .feature-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+        }
+        
+        .feature-item {
+            display: flex;  /* 使用Flexbox布局 */
+            align-items: center;  /* 垂直居中对齐 */
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .feature-img {
+            margin-right: 30px;  /* 图片与文字之间的间距 */
+        }
+        
+        .feature-img img {
+            width: 300px;  /* 设置图片宽度 */
+            height: auto;  /* 保持图片比例 */
+        }
+        
+        .feature-text {
+            flex: 1;  /* 文字区域占据剩余空间 */
+        }
+        
+        .feature-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-text p {
+            font-size: 1.2rem;
+        }
+    </style>
+    <title>产品功能介绍！</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="top">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/mylogo.png" alt="">
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="./首页.html">首页</a>
+                </li>
+                <li>
+                    <a href="./在线商城.html">在线商城</a>
+                </li>
+                <li>
+                    <a href="./最新资讯.html" class="active">最新资讯</a>
+                </li>
+                <li>
+                    <a href="./服务中心.html">服务中心</a>
+                </li>
+                
+                <li>
+                    <a href="./联系我们.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+    <div class="section">
+        <div class="hot">
+        </div>
+
+        <div class="about">
+            <div class="ab_t">
+                <span class="xian"></span>
+                <span class="ms">儿童版功能</span>
+                <span class="xian"></span>
+            </div>
+        </div>
+        <div class="feature-container">
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="./img/功能儿童版1.jpg" alt="智能手表">
+            </div>
+            <div class="feature-text">
+                <h2>高精度定位技术<br>实时守护</h2>
+                <p>设定安全区域为家长提供了足够的时间来识别警报、判断孩子位置并采取必要的寻找措施。</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="./img/功能儿童版2.jpg" alt="智能手表">
+            </div>
+            <div class="feature-text">
+                <h2>实时轨迹<br>了解行踪</h2>
+                <p>确保家长能够随时掌握孩子的行踪，一旦发现异常，就能迅速采取行动。</p>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="about">
+            <div class="ab_t">
+                <span class="xian"></span>
+                <span class="ms">老年版功能</span>
+                <span class="xian"></span>
+            </div>
+        </div>
+            <div class="feature-container">
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="./img/功能老人版1.jpg" alt="智能手表" style="height: 350px;">
+            </div>
+            <div class="feature-text">
+                <h2>全天心率监测<br>异常提醒</h2>
+                <p>支持全天监测心率情况，数据异常时手机能及时收到通知，帮助家人及时了解老人的身体状况。</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-img">
+                <img src="./img/功能老人版2.jpg" alt="智能手表" style="width: 330px;">
+            </div>
+            <div class="feature-text">
+                <h2>跌倒检测<br>自动报警</h2>
+                <p>手环检测到老人跌倒后，会在绑定的子女端手机进行警报，并向子女端手机发送实时位置。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="bottom">
+            <div class="left">
+
+            </div>
+            <div class="center">
+                <dl>
+                    <dt>&nbsp;&nbsp;&nbsp;服务</dt>
+                    <dd>常见问题</dd>
+                    <dd>保养与检修</dd>
+                    <dd>您的最爱</dd>
+                    <dd>新闻中心</dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;&nbsp;在线支持</dt>
+                    <dd>教育商店</dd>
+                    <dd>在线客服</dd>
+                    <dd>终端云服务</dd>
+                    <dd>消费者服务热线</dd>
+                </dl>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd>产品注册</dd>
+                    <dd>线下教程</dd>
+                    <dd>会员权益</dd>
+                    <dd>帮助中心</dd>
+                </dl>
+            </div>
+            <div class="right">
+                <h3>支持与服务</h3>
+                <img src="./img/ewm.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bq">
+        <p>版权所以：2025网页设计版权所有.</p>
+    </div>
+</body>
+</html>

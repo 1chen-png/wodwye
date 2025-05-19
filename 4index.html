@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .head {
+            width: 100%;
+            height: 85px;
+            background-color: #fff;
+        }
+        
+        .head .top {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .top .logo {
+            float: left;
+            margin-top: 14px;
+        }
+        
+        .logo img {
+            width: 135px;
+            height: 100%;
+        }
+        
+        .top ul {
+            float: right;
+            height: 85px;
+            line-height: 85px;
+        }
+        
+        .top ul li {
+            float: left;
+        }
+        
+        .top ul li a {
+            color: #333;
+            margin: 0px 25px;
+        }
+        
+        .top ul li a.active {
+            color: rgb(185, 54, 3);
+            border-bottom: 2px solid rgb(185, 54, 3);
+            padding-bottom: 5px;
+        }
+        
+        .top ul li a:hover {
+            color: rgb(185, 54, 3);
+        }
+        
+        .banner {
+            width: 100%;
+            height: 470px;
+            background: url(./img/大图.jpg)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .section {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section .hot {
+            margin: 60px 0px;
+        }
+        
+        .section .hot .hot_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .xian {
+            width: 100px;
+            background-color: #333;
+            height: 2px;
+            display: inline-block;
+        }
+        
+        .ms {
+            margin: 0px 30px;
+            font-size: 28px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .lx {
+            margin: 60px 0px;
+        }
+        
+        .lx_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .lx_b {
+            overflow: hidden;
+            margin-top: 60px;
+        }
+        
+        .icons {
+            overflow: hidden;
+        }
+        
+        .icons li {
+            width: 320px;
+            height: 185px;
+            border: 1px solid rgb(236, 236, 236);
+            text-align: center;
+            float: left;
+            margin-right: 37px;
+        }
+        
+        .icons li .icon {
+            width: 95px;
+            height: 90px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .icons li .icon.rx {
+            background: url(./img/服务热线.png)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .icons li .icon.sj {
+            background: url(./img/手机.png)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .icons li .icon.yx {
+            background: url(./img/符号-邮箱.png)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .icons li .icon.dz {
+            background: url(./img/地址.png)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .zlx {
+            margin: 50px 0px;
+        }
+        
+        .zlx .zlx_x {
+            width: 4px;
+            height: 30px;
+            background: #000;
+            display: inline-block;
+        }
+        
+        .zlx .zlx_lx {
+            vertical-align: top;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-left: 10px;
+        }
+        
+        .inp {
+            border: 1px solid rgb(236, 236, 236);
+            text-align: center;
+            height: 395px;
+        }
+        
+        .inp div {
+            margin: 20px 0px;
+        }
+        
+        .inp input {
+            width: 570px;
+            height: 30px;
+            text-indent: 10px;
+        }
+        
+        .inp textarea {
+            width: 574px;
+            height: 105px;
+            vertical-align: top;
+            text-indent: 10px;
+        }
+        
+        .btn a {
+            display: inline-block;
+            width: 85px;
+            height: 32px;
+            background: rgb(216, 38, 52);
+            text-align: center;
+            line-height: 32px;
+            margin: 0px 10px;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .btn a.qc {
+            background-color: rgb(122, 119, 119);
+        }
+        
+        .footer {
+            background-color: rgb(31, 32, 36);
+            overflow: hidden;
+        }
+        
+        .footer .bottom {
+            width: 1200px;
+            margin: 40px auto 20px auto;
+            overflow: hidden;
+        }
+        
+        .footer .bottom .left {
+            float: left;
+            width: 148px;
+            height: 80px;
+            background: url(./img/mylogo.png)no-repeat;
+            background-size: 100% 100%;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        
+        .footer .center {
+            float: left;
+            margin-left: 268px;
+            color: #fff;
+        }
+        
+        .footer .center dl {
+            display: inline-block;
+            margin: 0px 30px;
+        }
+        
+        .footer .center dl dt {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .footer .center dd {
+            margin: 5px 0px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .footer .right {
+            float: right;
+        }
+        
+        .footer .right h3 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        
+        .bq {
+            height: 40px;
+            line-height: 40px;
+            background-color: rgb(34, 38, 42);
+        }
+        
+        .bq p {
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+    <title>联系我们</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="top">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/mylogo.png" alt="">
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="./首页.html">首页</a>
+                </li>
+                <li>
+                    <a href="./在线商城.html">在线商城</a>
+                </li>
+                <li>
+                    <a href="./最新资讯.html">最新资讯</a>
+                </li>
+                <li>
+                    <a href="./服务中心.html">服务中心</a>
+                </li>
+                
+                <li>
+                    <a href="./联系我们.html" class="active">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="section">
+        <div class="lx">
+            <div class="lx_t">
+                <span class="xian"></span>
+                <span class="ms">联系我们</span>
+                <span class="xian"></span>
+            </div>
+            <div class="lx_b">
+                <ul class="icons">
+                    <li>
+                        <i class="icon rx"></i>
+                        <p style="margin-top: 5px;">咨询热线</p>
+                        <p style="margin-top: 2px;">020-888888</p>
+                    </li>
+                    <li>
+                        <i class="icon sj"></i>
+                        <p style="margin-top: 5px;">手机</p>
+                        <p style="margin-top: 2px;">18365362339</p>
+                    </li>
+                    <li>
+                        <i class="icon yx"></i>
+                        <p style="margin-top: 5px;">邮箱</p>
+                        <p style="margin-top: 2px;">youweb@qq.com</p>
+                    </li>
+                    <li style="margin-right:0px;">
+                        <i class="icon dz"></i>
+                        <p style="margin-top: 5px;">地址</p>
+                        <p style="margin-top: 2px;">芜湖市</p>
+                    </li>
+                </ul>
+                <div class="zlx">
+                    <span class="zlx_x"></span>
+                    <span class="zlx_lx">在线联系</span>
+                </div>
+                <div class="inp">
+                    <div class="xm" style=" margin-top: 52px;">
+                        您的姓名:
+                        <input type="text" placeholder="您的姓名">
+                    </div>
+                    <div class="sj">
+                        手机号码:
+                        <input type="text" placeholder="手机号码">
+                    </div>
+                    <div class="dzys">
+                        电子邮箱:
+                        <input type="text" placeholder="电子邮箱">
+                    </div>
+                    <div class="nc">
+                        留言内容：
+                        <textarea name="" id="" placeholder="留言内容"></textarea>
+                    </div>
+                    <div class="btn">
+                        <a href="" class="tj">提交</a>
+                        <a href="" class="qc">清除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="bottom">
+            <div class="left">
+
+            </div>
+            <div class="center">
+                <dl>
+                    <dt>&nbsp;&nbsp;&nbsp;服务</dt>
+                    <dd>常见问题</dd>
+                    <dd>保养与检修</dd>
+                    <dd>您的最爱</dd>
+                    <dd>新闻中心</dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;&nbsp;在线支持</dt>
+                    <dd>教育商店</dd>
+                    <dd>在线客服</dd>
+                    <dd>终端云服务</dd>
+                    <dd>消费者服务热线</dd>
+                </dl>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd>产品注册</dd>
+                    <dd>线下教程</dd>
+                    <dd>会员权益</dd>
+                    <dd>帮助中心</dd>
+                </dl>
+            </div>
+            <div class="right">
+                <h3>支持与服务</h3>
+                <img src="./img/ewm.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bq">
+        <p>版权所以：2023美食天下网页设计版权所有.</p>
+    </div>
+</body>
+
+</html>

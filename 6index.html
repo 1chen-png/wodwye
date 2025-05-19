@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .head {
+            width: 100%;
+            height: 85px;
+            background-color: #fff;
+        }
+        
+        .head .top {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .top .logo {
+            float: left;
+            margin-top: 14px;
+        }
+        
+        .logo img {
+            width: 135px;
+            height: 100%;
+        }
+        
+        .top ul {
+            float: right;
+            height: 85px;
+            line-height: 85px;
+        }
+        
+        .top ul li {
+            float: left;
+        }
+        
+        .top ul li a {
+            color: #333;
+            margin: 0px 25px;
+        }
+        
+        .top ul li a.active {
+            color: rgb(185, 54, 3);
+            border-bottom: 2px solid rgb(185, 54, 3);
+            padding-bottom: 5px;
+        }
+        
+        .top ul li a:hover {
+            color: rgb(185, 54, 3);
+        }
+        
+        .banner {
+            width: 100%;
+            height: 470px;
+            background: url(./img/大图.jpg)no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .section {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section .hot {
+            margin: 60px 0px;
+        }
+        
+        .section .hot .hot_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .xian {
+            width: 100px;
+            background-color: #333;
+            height: 2px;
+            display: inline-block;
+        }
+        
+        .ms {
+            margin: 0px 30px;
+            font-size: 28px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .hot_b {
+            overflow: hidden;
+        }
+        
+        .hot_b ul li {
+            float: left;
+            width: 435px;
+            overflow: hidden;
+            margin-right: 45px;
+            margin-top: 40px;
+        }
+        
+        .hot_b ul li img {
+            width: 100%;
+        }
+        
+        .hot_b ul li div {
+            margin-top: 10px;
+        }
+        
+        .hot_b ul li div h3 {
+            margin-bottom: 8px;
+        }
+        
+        .hot_b ul li div p {
+            font-size: 14px;
+            color: rgb(143, 140, 140);
+        }
+        
+        .about .ab_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .about .ab_b {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .ab_b .ab_r {
+            float: right;
+            width: 950px;
+        }
+        
+        .ab_r p {
+            text-indent: 2rem;
+            margin: 10px 0px;
+            line-height: 28px;
+            font-size: 15px;
+        }
+        
+        .ab_b img {
+            width: 360px;
+            height: 300px;
+            margin-top: 0px;
+        }
+        
+        .ys_b {
+            overflow: hidden;
+        }
+        
+        .ys_b ul li {
+            float: left;
+            width: 435px;
+            overflow: hidden;
+            margin-right: 45px;
+            margin-top: 40px;
+        }
+        
+        .ys_b ul li img {
+            width: 100%;
+        }
+        
+        .ys_b ul li div {
+            margin-top: 10px;
+        }
+        
+        .ys_b ul li div h3 {
+            margin-bottom: 8px;
+        }
+        
+        .ys_b ul li div p {
+            font-size: 14px;
+            color: rgb(143, 140, 140);
+        }
+        
+        .ys_t {
+            margin: 10px 0px;
+            text-align: center;
+        }
+        
+        .section .ys {
+            margin: 60px 0px;
+        }
+        
+        .footer {
+            background-color: rgb(31, 32, 36);
+            overflow: hidden;
+        }
+        
+        .footer .bottom {
+            width: 1200px;
+            margin: 40px auto 20px auto;
+            overflow: hidden;
+        }
+        
+        .footer .bottom .left {
+            float: left;
+            width: 148px;
+            height: 120px;
+           background: url(./img/mylogo.png)no-repeat;       
+            background-size: 100% 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            }      
+            
+        
+        .footer .center {
+            float: left;
+            margin-left: 268px;
+            color: #fff;
+        }
+        
+        .footer .center dl {
+            display: inline-block;
+            margin: 0px 30px;
+        }
+        
+        .footer .center dl dt {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .footer .center dd {
+            margin: 5px 0px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .footer .right {
+            float: right;
+        }
+        
+        .footer .right h3 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        
+        .bq {
+            height: 40px;
+            line-height: 40px;
+            background-color: rgb(34, 38, 42);
+        }
+        
+        .bq p {
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="top">
+            <div class="logo">
+                <a href="./index.html">
+                        <img src="./img/mylogo.png" alt="" >
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="./首页.html" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="./在线商城.html" >在线商城</a>
+                </li>
+                <li>
+                    <a href="./最新资讯.html">最新资讯</a>
+                </li>
+                <li>
+                    <a href="./服务中心.html">服务中心</a>
+                </li>
+                <li>
+                    <a href="./联系我们.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="section">
+        <div class="hot">
+            <div class="ys">
+                <div class="ys_t">
+                    <span class="xian"></span>
+                    <span class="ms">老年版款式</span>
+                    <span class="xian"></span>
+                </div>
+                <div class="ys_b">
+                    <ul>
+                        <li>
+                            <img src="./img/老人1.jpg" alt="">
+                            <div class="text">
+                                <h3>细节展示图1</h3>
+                                <p>手环主体与表带设计流畅，表带上均匀分布透气孔，扣具简约实用，整体造型时尚大方。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/老人2.jpg" alt="" style="font-size: 60%;">
+                            <div class="text">
+                                <h3>细节展示图2</h3>
+                                <p>醒目显示 “紧急呼叫 正在启动中...” 字样及红色 “SOS” 标识，直观呈现手环紧急呼叫功能，传达关键时刻保障安全的特性</p>
+                            </div><br>
+                        </li>
+                        <li style="margin-right:0px;">
+                            <img src="./img/老人4.jpg" alt="">
+                            <div class="text">
+                                <h3>细节展示图3</h3>
+                                <p>清晰展现手环侧面线条，突出产品精致工艺与设计感。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hot_t">
+                <span class="xian"></span>
+                <span class="ms">儿童版款式</span>
+                <span class="xian"></span>
+            </div>
+            <div class="hot_b">
+                <ul>
+                    <li>
+                        <img src="./img/儿童5.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图1</h3>
+                            <p>椭圆形主体搭配黑色表带，表带上有圆形透气孔，顶部两侧白色点缀，简约时尚。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/儿童2.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图2</h3>
+                            <p>黑色儿童智能手环，以小熊猫为造型灵感，顶部两侧白色 “耳朵” 点缀，简洁可爱。</p>
+                        </div>
+                    </li>
+                    <li style="margin-right:0px;">
+                        <img src="./img/儿童3.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图3</h3>
+                            <p>白色的 “耳朵” 部件点缀其间，生动还原小熊猫形象。全方位展示产品造型，凸显精致工艺。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/儿童4.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图4</h3>
+                            <p>清晰呈现手环背面的传感器等部件，黑色主体搭配标志性的白色 “耳朵” 装饰，表带上透气孔和扣具细节分明。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/儿童1.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图5</h3>
+                            <p>独特的叠放方式营造出别致的视觉效果，进一步突出小熊猫造型的可爱与趣味性，吸引小朋友目光。</p>
+                        </div>
+                    </li>
+                    <li style="margin-right:0px;">
+                        <img src="./img/儿童6.jpg" alt="">
+                        <div class="text">
+                            <h3>细节展示图6</h3>
+                            <p>以正面视角展示黑色的小熊猫造型儿童智能手环，椭圆形主体简洁大方，黑色表带环绕。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="about">
+            <div class="ab_t">
+                <span class="xian"></span>
+                <span class="ms">关于我们</span>
+                <span class="xian"></span>
+            </div>
+            <div class="ab_b">
+                <img src="./img/老人和小孩.jpg" alt="">
+                <div class="ab_r">
+                    <p>
+                        本产品专为阿尔茨海默症老人及儿童设计，打造家庭智能安全屏障。搭载精准北斗/GPS卫星定位系统，当佩戴者超出预设安全范围，即刻触发后台预警，推送实时位置至家长端APP，让您第一时间掌握动态，快速响应，大幅降低走失风险。
+                    </p>
+                    <p>内置高灵敏度心率、血压监测模块，24小时智能守护健康安全。当检测到心率、血压异常飙升并超过安全阈值时，设备将自动启动双重应急机制：同步发送警报至紧急联系人，并智能拨打120急救电话，为突发状况争取黄金救援时间。
+                    </p>
+                    <p>
+                        不同于普通电话手表的被动联系模式，该手表以「主动监测+智能预警」重构安全逻辑。无需依赖手动通话，危险信号由AI算法实时捕捉，在您察觉风险前，预警已直达掌心。无论是老人散步时的意外偏离，还是孩子玩耍中的无意识远行，安全守护始终快人一步。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="bottom">
+            <div class="left">
+
+            </div>
+            <div class="center">
+                <dl>
+                    <dt>&nbsp;&nbsp;&nbsp;服务</dt>
+                    <dd>常见问题</dd>
+                    <dd>保养与检修</dd>
+                    <dd>您的最爱</dd>
+                    <dd>新闻中心</dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;&nbsp;在线支持</dt>
+                    <dd>教育商店</dd>
+                    <dd>在线客服</dd>
+                    <dd>终端云服务</dd>
+                    <dd>消费者服务热线</dd>
+                </dl>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd>产品注册</dd>
+                    <dd>线下教程</dd>
+                    <dd>会员权益</dd>
+                    <dd>帮助中心</dd>
+                </dl>
+            </div>
+            <div class="right">
+                <h3>支持与服务</h3>
+                <img src="./img/ewm.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bq">
+        <p>版权所以：2025网页设计版权所有.</p>
+    </div>
+</body>
+
+</html>
